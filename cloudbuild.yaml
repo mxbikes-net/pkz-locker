@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://github.com/mxbikes-net/pkz-locker']
+  args: ['clone', '--single-branch', '--branch', 'main', 'https://github.com/mxbikes-net/pkz-locker']
 
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/pkz-locker', '.']
